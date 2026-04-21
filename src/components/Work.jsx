@@ -37,7 +37,7 @@ export default function Work() {
     <section className="work-section">
       <div className="work-inner">
         <div className="work-header">
-          <h2 className="work-title">THE WORK</h2>
+          <h2 className="work-title" data-parallax="0.07">THE WORK</h2>
           <Link to="/case-study" className="work-eyebrow work-eyebrow-link">
             OUR RECENT CASE STUDIES
             <span className="eyebrow-arrow">-&gt;</span>

@@ -3,11 +3,11 @@ import React from 'react';
 export default function Problem() {
   return (
     <section className="problem-section">
-      <div className="problem-top-glow"></div>
+      <div className="problem-top-glow" data-parallax="0.25" data-parallax-dir="-1"></div>
       <div className="problem-inner">
         <div className="problem-left">
           <p className="problem-eyebrow">THE TRUTH ABOUT CONTENT</p>
-          <h2 className="problem-title">YOUR PRODUCT<br/>IS NOT YOUR<br/>BIGGEST PROBLEM.<br/><span style={{color: '#888'}}>INVISIBILITY IS.</span></h2>
+          <h2 className="problem-title" data-parallax="0.08">YOUR PRODUCT<br/>IS NOT YOUR<br/>BIGGEST PROBLEM.<br/><span style={{color: '#888'}}>INVISIBILITY IS.</span></h2>
         </div>
         <div className="problem-right">
           <div className="problem-visual">

@@ -6,6 +6,7 @@ import Home from './pages/Home';
 import ServicesPage from './pages/ServicesPage';
 import WhyContentPage from './pages/WhyContentPage';
 import CaseStudyPage from './pages/CaseStudyPage';
+import { useParallax } from './hooks/useParallax';
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -16,6 +17,7 @@ function ScrollToTop() {
 }
 
 function App() {
+  useParallax();
   return (
     <Router>
       <ScrollToTop />
