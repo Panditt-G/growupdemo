@@ -1,56 +1,81 @@
-import React, { useState, useEffect } from 'react';
+import React, { useRef } from 'react';
+import { motion, useScroll, useTransform } from 'framer-motion';
 
 export default function SelectedWorks() {
-  const [currentIdx, setCurrentIdx] = useState(0);
+  const sectionRef = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: sectionRef,
+    offset: ['start end', 'end start'],
+  });
+  const takeoverY = useTransform(
+    scrollYProgress,
+    [0, 0.35, 0.72, 1],
+    ['8vh', '2vh', '-4vh', '-10vh']
+  );
 
   const videos = [
-    '/video-1.mp4',
-    '/video-2.mp4',
-    '/video-3.mp4',
-    '/video-4.mp4'
+    '/v/1.mp4',
+    '/v/2.mp4',
+    '/v/3.mp4',
+    '/v/4.mp4',
+    '/v/5.mp4',
+    '/v/6.mp4',
+    '/v/7.mp4',
+    '/v/8.mp4',
+    '/v/10.mp4',
+    '/v/11.mp4',
+    '/v/12.mp4',
+    '/v/13.mp4',
+    '/v/14.mp4',
+    '/v/15.mp4',
+    '/v/16.mp4',
+    '/v/17.mp4',
   ];
-
   const logos = [
-    '/logo/24.png',
-    '/logo/26.png',
-    '/logo/28.png',
-    '/logo/37.png',
-    '/logo/43.png',
-    '/logo/Aura Bling.png',
-    '/logo/Banjos Logo.png',
-    '/logo/Cela Logo.png',
-    '/logo/Eunora Logo by nisha Garani .png',
-    '/logo/Manifestation.png',
-    '/logo/Sanmaan.png',
-    '/logo/Shubhaarambh events Logo.png',
-    '/logo/Usha Infotech (1).png',
-    '/logo/finshell logo 01.jpg',
-    '/logo/niya\'s logo.jpg',
-    '/logo/tcs logo.jpeg',
-    '/logo/timus-logo-black.avif',
-    '/logo/usha infra.png'
+    { src: '/logo/37.png', alt: '37' },
+    { src: '/logo/kaari.png', alt: 'Kaari' },
+    { src: '/logo/kaira.png', alt: 'Kaira' },
+    { src: '/logo/g-logo.png', alt: 'G Logo' },
+    { src: '/logo/Manifestation.png', alt: 'Manifestation' },
+    { src: '/logo/Sanmaan.png', alt: 'Sanmaan' },
+    { src: '/logo/timus-logo-black.avif', alt: 'Timus' },
+    { src: '/logo/tcs logo.jpeg', alt: 'TCS' },
   ];
 
   return (
-    <section className="selected-works">
-      <div className="sw-video-marquee-container">
+    <section className="selected-works" ref={sectionRef}>
+      <motion.div
+        className="sw-video-marquee-container video-section"
+        data-parallax="0.08"
+        data-parallax-mode="css-var"
+        style={{ '--takeover-y': takeoverY }}
+        transformTemplate={() =>
+          'translateY(calc(var(--parallax-y, 0px) + var(--takeover-y, 0px)))'
+        }
+      >
+        {/* Horizontal infinite logo marquee */}
+        <div className="sw-logo-marquee" aria-label="Client logos">
+          <div className="sw-logo-track">
+            {[...logos, ...logos, ...logos, ...logos, ...logos, ...logos, ...logos, ...logos].map((logo, i) => (
+              <img
+                key={i}
+                src={encodeURI(logo.src)}
+                alt={logo.alt}
+                className="sw-logo-image"
+                loading="lazy"
+              />
+            ))}
+          </div>
+        </div>
         <div className="sw-video-marquee-track">
-          {[...videos, ...videos].map((vid, idx) => (
+          {[...videos, ...videos, ...videos, ...videos].map((vid, idx) => (
             <div className="sw-card" key={idx}>
               <video src={vid} autoPlay loop muted playsInline className="sw-video" />
+              <div className="sw-video-gradient" aria-hidden="true" />
             </div>
           ))}
         </div>
-      </div>
-      <div className="sw-video-marquee-container" style={{marginTop: '1.5rem'}}>
-        <div className="sw-video-marquee-track reverse">
-          {[...videos, ...videos].map((vid, idx) => (
-            <div className="sw-card" key={idx}>
-              <video src={vid} autoPlay loop muted playsInline className="sw-video" />
-            </div>
-          ))}
-        </div>
-      </div>
+      </motion.div>
     </section>
   );
 }
