@@ -51,7 +51,8 @@ export default function Work() {
               </div>
               <p className="work-client">{c.name}</p>
               <p className="work-metric">{c.metric}</p>
-              <span className="work-card-cta">View case study</span>
+              <p className="work-desc">{c.desc}</p>
+              <span className="work-card-cta">View case study →</span>
             </Link>
           ))}
         </div>

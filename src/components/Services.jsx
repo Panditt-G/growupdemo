@@ -42,7 +42,6 @@ export default function Services() {
         <div className="services-list">
           {services.map((svc, idx) => (
             <div className="svc-item" key={idx}>
-              {/* Top row: always visible */}
               <div className="svc-top-row">
                 <span className="svc-num">{svc.num}</span>
                 <div className="svc-thumb">
@@ -50,7 +49,16 @@ export default function Services() {
                 </div>
                 <h3 className="svc-title">{svc.title}</h3>
               </div>
-
+              <div className="svc-expand">
+                <div className="svc-expand-inner">
+                  <p className="svc-desc">{svc.desc}</p>
+                  <ul className="svc-bullets">
+                    {svc.bullets.map((b, j) => (
+                      <li key={j}>{b}</li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
             </div>
           ))}
         </div>
