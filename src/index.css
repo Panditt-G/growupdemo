@@ -1136,24 +1136,40 @@ body {
 .sw-logo-track {
   display: flex;
   align-items: center;
-  gap: clamp(2rem, 4vw, 3.5rem);
+  gap: clamp(0.75rem, 1.5vw, 1.25rem);
   width: max-content;
-  animation: logo-scroll 120s linear infinite;
+  animation: logo-scroll 80s linear infinite;
   padding: clamp(0.6rem, 1.5vw, 1rem) 0;
 }
 
 @keyframes logo-scroll {
-  0%   { transform: translateX(-50%); }
-  100% { transform: translateX(0); }
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
 }
 
-.sw-logo-image {
+/* Pill container — gives dark and light logos contrast on the dark bg */
+.sw-logo-pill {
   flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  border-radius: 10px;
+  padding: 0.55rem 1.1rem;
+  height: clamp(44px, 5vw, 56px);
+  box-sizing: border-box;
+  transition: opacity 0.25s ease;
+}
+.sw-logo-pill:hover { opacity: 0.85; }
+
+.sw-logo-image {
+  display: block;
   width: auto;
-  height: clamp(22px, 2.4vw, 32px);
-  max-height: 32px;
+  height: clamp(18px, 2vw, 26px);
+  max-height: 26px;
   object-fit: contain;
-  filter: brightness(0) invert(1);
+  /* Natural colours — no white override */
+  filter: none;
   opacity: 1;
 }
 
@@ -1226,14 +1242,18 @@ body {
 }
 
 @media (max-width: 768px) {
+  .sw-logo-pill {
+    padding: 0.4rem 0.8rem;
+    height: 40px;
+    border-radius: 8px;
+  }
   .sw-logo-image {
-    height: clamp(18px, 4.5vw, 24px);
-    max-height: 24px;
-    opacity: 1;
+    height: clamp(16px, 4vw, 20px);
+    max-height: 20px;
   }
 
   .sw-logo-track {
-    gap: clamp(1.5rem, 5vw, 2.5rem);
+    gap: clamp(0.6rem, 3vw, 1rem);
     animation-duration: 90s;
   }
 
@@ -1684,16 +1704,6 @@ body {
 @media (max-width: 1024px) {
   .why-grid-modern { grid-template-columns: 1fr; gap: 2rem; }
 }
-
-/* ─────────────────────────────────────────────
-   GROW UP - SERVICES
-───────────────────────────────────────────── */
-.services-page .services-section { padding-top: 0; }
-
-/* ─────────────────────────────────────────────
-   GROW UP - SERVICES
-───────────────────────────────────────────── */
-.services-page .services-section { padding-top: 0; }
 
 /* ─────────────────────────────────────────────
    GROW UP - SERVICES
@@ -2636,6 +2646,7 @@ body {
   .footer-brand { flex: none; }
   .footer-bottom { flex-direction: column; gap: 0.9rem; text-align: center; }
 }
+@media (max-width: 600px) {
   .gu-hero-text-wrapper { flex-direction: column; align-items: flex-start; gap: 2rem; }
   .sw-card { width: 220px; height: 391px; }
   .case-study-hero-inner,
@@ -2651,7 +2662,7 @@ body {
   .case-study-metrics {
     grid-template-columns: 1fr;
   }
-
+}
 
 @media (max-width: 720px) {
   .gu-nav-inner {

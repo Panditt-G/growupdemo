@@ -15,8 +15,8 @@ export default function Hero() {
       bgRef.current.style.transform = `translate(${x * -20}px, ${y * -20}px)`;
     };
 
-    window.addEventListener('mousemove', handleMouseMove);
-    return () => window.removeEventListener('mousemove', handleMouseMove);
+    window.addEventListener('mousemove', handleMouseMove, { passive: true });
+    return () => window.removeEventListener('mousemove', handleMouseMove, { passive: true });
   }, []);
 
   return (
