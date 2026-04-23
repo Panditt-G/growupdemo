@@ -119,7 +119,15 @@ export default function Work() {
         </div>
         <div className="work-grid">
           {cases.map((c, i) => (
-            <WorkCard c={c} key={i} />
+            <Link to={c.href} className="work-card work-card-link" key={i}>
+              <div className="work-img-placeholder">
+                <video src={c.video} autoPlay loop muted playsInline className="work-video" />
+              </div>
+              <p className="work-client">{c.name}</p>
+              <p className="work-metric">{c.metric}</p>
+              <p className="work-desc">{c.desc}</p>
+              <span className="work-card-cta">View case study →</span>
+            </Link>
           ))}
         </div>
       </div>
