@@ -13,9 +13,9 @@ export default function Footer() {
               <Link to="/" className="footer-logo">
                 Grow<span>up.</span>
               </Link>
-              <a href="mailto:Management.growupmedia@gmail.com" className="footer-email">
+              <span className="footer-email">
                 Management.growupmedia@gmail.com
-              </a>
+              </span>
             </div>
             <p className="footer-description">
               Content-first growth studio. Turning attention into revenue.
