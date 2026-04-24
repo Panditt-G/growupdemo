@@ -7,6 +7,7 @@ export default function SelectedWorks() {
     target: sectionRef,
     offset: ['start end', 'end start'],
   });
+
   const takeoverY = useTransform(
     scrollYProgress,
     [0, 0.35, 0.72, 1],
@@ -14,23 +15,18 @@ export default function SelectedWorks() {
   );
 
   const videos = [
-    '/v/1.mp4',
-    '/v/2.mp4',
-    '/v/3.mp4',
-    '/v/4.mp4',
-    '/v/5.mp4',
-    '/v/6.mp4',
-    '/v/7.mp4',
-    '/v/8.mp4',
-    '/v/10.mp4',
-    '/v/11.mp4',
-    '/v/12.mp4',
-    '/v/13.mp4',
-    '/v/14.mp4',
-    '/v/15.mp4',
-    '/v/16.mp4',
-    '/v/17.mp4',
+    '/video/Rv01.mp4',
+    '/video/dt01.mp4',
+    '/video/en02.mp4',
+    '/video/gr3.mp4',
+    '/video/tc01.mp4',
+    '/video/timus01.mp4',
+    '/video/tl02.mp4',
+    '/video/uu01.mp4',
+    '/video/uu02.mp4',
+    '/video/uu03.mp4',
   ];
+
   const logos = [
     { src: '/logo/37.png',                           alt: '37'                   },
     { src: '/logo/Aura Bling.png',                   alt: 'Aura Bling'           },

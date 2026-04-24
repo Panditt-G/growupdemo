@@ -75,7 +75,11 @@ body {
   left: 0; right: 0;
   padding: 0 4%;
   z-index: 1000;
-  transition: padding var(--transition);
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), padding 0.3s ease;
+}
+
+.gu-nav.nav-hidden {
+  transform: translateY(-100%);
 }
 
 .gu-nav.scrolled .gu-nav-inner {
@@ -1839,7 +1843,7 @@ body {
 }
 .svc-item:hover .svc-title {
   color: var(--lime);
-  padding-top: 0.8rem;
+  padding-top: 0.2rem;
   padding-left: 2rem;
 }
 
@@ -1858,7 +1862,7 @@ body {
   max-height: 600px;
   opacity: 1;
   padding-left: 2rem;
-  padding-top: 2rem;
+  padding-top: 0rem;
 }
 
 .svc-expand-inner {
@@ -3171,4 +3175,42 @@ body {
 }
 .cs-cta-btn:hover .cs-cta-icon {
   transform: translate(0.25rem, -0.25rem);
+}
+
+/* Force CTAs to straight line and fix arrow alignment */
+.gu-btn-hero, .gu-btn-nav, .btn-primary-blue, .cs-cta-btn {
+  display: inline-flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  justify-content: center !important;
+  white-space: nowrap !important;
+  gap: 0.4rem !important;
+  line-height: 1 !important;
+}
+
+.btn-arrow, .btn-icon, .cs-cta-icon, .cs-cta-btn svg {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  vertical-align: middle !important;
+  transform: translateY(0.5px) !important; /* Reduced nudge */
+}
+
+
+/* Footer Redesign Fixes */
+.footer-brand-img {
+  height: 40px !important;
+  width: auto !important;
+  margin-bottom: 1rem;
+}
+.footer-logo {
+  font-size: 1.8rem !important;
+  font-weight: 800 !important;
+  color: #fff !important;
+  text-decoration: none !important;
+  display: block !important;
+  line-height: 1 !important;
+}
+.footer-logo span {
+  color: #b2e355 !important;
 }

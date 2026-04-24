@@ -25,7 +25,7 @@ export default function CtaFaq() {
             One call. Thirty minutes. We'll show you exactly what's missing and how we fix it.
           </p>
           <div className="cf-cta-group">
-            <a href="mailto:Management.growupmedia@gmail.com" className="gu-btn-hero">
+            <a href="tel:+917821092963" className="gu-btn-hero">
               BOOK YOUR FREE CALL
             </a>
             <p className="cf-guarantee">No commitment. Just clarity.</p>

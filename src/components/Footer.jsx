@@ -2,70 +2,60 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 export default function Footer() {
-  const year = new Date().getFullYear();
-
   return (
     <footer className="site-footer">
       <div className="footer-inner">
         <div className="footer-main">
-          <div className="footer-brand">
-            <Link to="/#hero" className="footer-brand-home" aria-label="Grow Up home">
-              <img
-                src="/logo/g-logo.png"
-                alt="Grow Up logo"
-                className="footer-brand-logo"
-                onError={(event) => {
-                  event.currentTarget.style.display = 'none';
-                }}
-              />
-            </Link>
-            <Link to="/#hero" className="footer-brand-name">
-              Grow Up
-            </Link>
-            <a
-              href="mailto:Management.growupmedia@gmail.com"
-              className="footer-brand-email"
-            >
-              Management.growupmedia@gmail.com
-            </a>
+          {/* Left Side: Brand & Description */}
+          <div className="footer-left">
+            <div className="footer-brand-top">
+              <img src="/logo/g-logo.png" alt="Growup Logo" className="footer-brand-img" />
+              <Link to="/" className="footer-logo">
+                Grow<span>up.</span>
+              </Link>
+              <a href="mailto:Management.growupmedia@gmail.com" className="footer-email">
+                Management.growupmedia@gmail.com
+              </a>
+            </div>
+            <p className="footer-description">
+              Content-first growth studio. Turning attention into revenue.
+            </p>
+            <div className="footer-socials">
+              <a href="https://www.instagram.com/growupmarketplace.ig/" target="_blank" rel="noopener noreferrer" className="social-icon" aria-label="Instagram">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+              </a>
+            </div>
           </div>
 
+          {/* Right Side: Link Columns */}
           <div className="footer-navs">
-            <nav className="footer-nav-col" aria-label="Home sections">
-              <p className="footer-nav-head">Sections</p>
+            <div className="footer-nav-col">
+              <h4 className="footer-nav-head">Get Started</h4>
               <ul>
-                <li><Link to="/#services">Services</Link></li>
-                <li><Link to="/#selected-works">Selected Works</Link></li>
-                <li><Link to="/#work">Our Work</Link></li>
-                <li><Link to="/#testimonials">Testimonials</Link></li>
-              </ul>
-            </nav>
-
-            <nav className="footer-nav-col" aria-label="More pages">
-              <p className="footer-nav-head">Explore</p>
-              <ul>
+                <li><Link to="/services">Services</Link></li>
+                <li><Link to="/#contact">Contact</Link></li>
                 <li><Link to="/why-content">Why Content</Link></li>
-                <li><Link to="/case-study">Case Study</Link></li>
-                <li><Link to="/#problem">The Problem</Link></li>
               </ul>
-            </nav>
-
-            <nav className="footer-nav-col" aria-label="Contact links">
-              <p className="footer-nav-head">Contact</p>
+            </div>
+            <div className="footer-nav-col">
+              <h4 className="footer-nav-head">Our Work</h4>
               <ul>
-                <li><Link to="/#contact">Book a Call</Link></li>
-                <li>
-                  <a href="mailto:Management.growupmedia@gmail.com">
-                    Email Us
-                  </a>
-                </li>
+                <li><Link to="/case-study">Case Studies</Link></li>
+                <li><Link to="/case-study">Portfolio</Link></li>
               </ul>
-            </nav>
+            </div>
+            <div className="footer-nav-col">
+              <h4 className="footer-nav-head">Privacy & Policy</h4>
+              <ul>
+                <li><Link to="/privacy">Privacy Policy</Link></li>
+                <li><Link to="/terms">Terms of Service</Link></li>
+              </ul>
+            </div>
           </div>
         </div>
 
         <div className="footer-bottom">
-          <span className="footer-copy">&copy; {year} Grow Up. All rights reserved.</span>
+          <p className="footer-copy">© 2026 Grow Up. All rights reserved.</p>
         </div>
       </div>
     </footer>

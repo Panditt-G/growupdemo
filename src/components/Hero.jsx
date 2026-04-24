@@ -27,7 +27,7 @@ export default function Hero() {
 
       <div className="gu-hero-inner">
         {/* Kicker Badge */}
-        <div className="gu-hero-kicker-wrap">
+        <div className="gu-hero-kicker-wrap" style={{ marginTop: 'calc(var(--nav-h) + 1rem)', marginBottom: '0.25rem' }}>
           <span className="gu-hero-kicker-badge">Content-First Studio</span>
         </div>
 
@@ -49,11 +49,14 @@ export default function Hero() {
 
         {/* CTA Section */}
         <div className="gu-hero-cta-group">
-          <Link to="/#contact" className="gu-btn-hero">
-            <span className="btn-text">Get Started Today</span>
-            <span className="btn-arrow">â†’</span>
-          </Link>
-          <p className="gu-hero-guarantee">Limited availability for Q2 2026</p>
+          <a href="tel:+917821092963" className="gu-btn-hero">
+            <span className="btn-text">GET STARTED TODAY</span>
+            <span className="btn-arrow">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+              </svg>
+            </span>
+          </a>
         </div>
       </div>
     </section>

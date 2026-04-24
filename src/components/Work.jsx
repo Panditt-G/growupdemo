@@ -7,28 +7,28 @@ export default function Work() {
       name: 'TechFlow - SaaS',
       metric: '5,000 YOUTUBE SUBS',
       desc: 'Zero online presence to 5,000 YouTube subscribers in 6 months. 40% increase in website traffic. Pipeline started coming in from content alone.',
-      video: '/video-4.mp4',
+      video: '/video/Rv01.mp4',
       href: '/case-study',
     },
     {
       name: 'FashionFwd - E-commerce',
       metric: '3X ENGAGEMENT',
       desc: 'Dead Instagram to 3x engagement and 2x conversion rate in 90 days. Same product. Better content.',
-      video: '/video-2.mp4',
+      video: '/video/dt01.mp4',
       href: '/case-study',
     },
     {
       name: 'DataDash - SaaS',
       metric: '60% MORE DEMOS',
       desc: 'Visual rebrand, new landing pages, new brand identity. 60% more demo bookings. Their sales team stopped apologising for the website.',
-      video: '/video-3.mp4',
+      video: '/video/en02.mp4',
       href: '/case-study',
     },
     {
       name: 'GrowthOps - B2B',
       metric: '$1.2M PIPELINE',
       desc: 'End-to-end content distribution system. Repurposed 10 core webinars into 150+ micro-assets. Generated $1.2M in qualified pipeline in Q3.',
-      video: '/video-1.mp4',
+      video: '/video/gr3.mp4',
       href: '/case-study',
     },
   ];
@@ -40,7 +40,11 @@ export default function Work() {
           <h2 className="work-title" data-parallax="0.07">THE WORK</h2>
           <Link to="/case-study" className="work-eyebrow work-eyebrow-link">
             OUR RECENT CASE STUDIES
-            <span className="eyebrow-arrow">-&gt;</span>
+            <span className="eyebrow-arrow">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+              </svg>
+            </span>
           </Link>
         </div>
         <div className="work-grid">
@@ -52,7 +56,12 @@ export default function Work() {
               <p className="work-client">{c.name}</p>
               <p className="work-metric">{c.metric}</p>
               <p className="work-desc">{c.desc}</p>
-              <span className="work-card-cta">View case study →</span>
+              <span className="work-card-cta">
+                View case study 
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" style={{ marginLeft: '6px' }}>
+                  <path d="M5 12h14M12 5l7 7-7 7"/>
+                </svg>
+              </span>
             </Link>
           ))}
         </div>
