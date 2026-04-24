@@ -390,7 +390,7 @@ body {
 
 /* ── Main headline ── */
 .gu-hero-title {
-  font-size: clamp(2.5rem, 7.8vw, 8.5rem);
+  font-size: clamp(3rem, 9vw, 10.5rem);
   font-weight: 800;
   line-height: 0.95;
   letter-spacing: -0.05em;
