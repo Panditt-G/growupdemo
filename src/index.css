@@ -250,8 +250,8 @@ body {
 .gu-hero {
   padding: 0 4%;
   background: #0f1d0b; /* Fallback and deep base */
-  height: 100vh;
-  min-height: 100vh;
+  height: 85vh;
+  min-height: 85vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -336,7 +336,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 2.5rem;
+  gap: 1.25rem;
   padding: 0 1rem;
 }
 
@@ -3302,8 +3302,46 @@ body {
 .sw-logo-track {
   animation: scroll-videos-reverse 100s linear infinite !important;
 }
+
+/* Nav and Button Spacing Fixes */
+.gu-nav-inner {
+  max-width: 1200px !important;
+}
+.gu-nav {
+  padding: 0 6% !important;
+}
 .sw-card {
   border-radius: 15px !important;
   overflow: hidden !important;
   border: none !important;
+}
+
+/* Hero Title Clipping Fix */
+.gu-hero-title {
+  line-height: 1.05 !important;
+  letter-spacing: -0.03em !important;
+  padding: 0.5rem 0 !important;
+}
+
+/* Hero Title Weight Adjustment */
+.gu-hero-title {
+  font-weight: 600 !important;
+}
+
+/* Final Hero Title Overflow Fix */
+.gu-hero-line, .gu-hero-line-em {
+  overflow: visible !important;
+  white-space: normal !important;
+  padding: 0.1em 0 !important;
+}
+
+/* Fix Hero Button Visibility */
+.gu-hero {
+  height: 100vh !important;
+  min-height: 100vh !important;
+}
+
+/* Tighter Hero Title Line Spacing */
+.gu-hero-title {
+  line-height: 0.85 !important;
 }
