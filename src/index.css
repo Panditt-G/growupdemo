@@ -3345,3 +3345,40 @@ body {
 .gu-hero-title {
   line-height: 0.85 !important;
 }
+
+/* ---------------------------------------------
+   MOBILE & TABLET OPTIMIZATIONS
+--------------------------------------------- */
+@media (max-width: 991px) {
+  .gu-hero-inner { gap: 1.5rem !important; }
+  .gu-hero-title { font-size: clamp(2.8rem, 10vw, 5rem) !important; line-height: 1.1 !important; }
+}
+
+@media (max-width: 768px) {
+  .gu-nav-links { display: none !important; }
+  .gu-nav-inner { 
+    display: flex !important; 
+    justify-content: space-between !important; 
+    padding: 0.6rem 1.25rem !important;
+    border-radius: 15px !important;
+  }
+  .gu-btn-nav { 
+    padding: 0.6rem 1rem !important; 
+    font-size: 0.75rem !important; 
+  }
+  .gu-hero-sub { font-size: 0.95rem !important; }
+  .gu-btn-hero { width: 100% !important; text-align: center !important; }
+  
+  .svc-item { 
+    grid-template-columns: 1fr !important;
+    grid-template-areas: " num\ \title\ \thumb\ \info\ !important;
+ gap: 1.2rem !important;
+ padding: 2rem 0 !important;
+ }
+ .svc-num { font-size: 1.2rem !important; }
+ .svc-thumb { width: 100% !important; height: 180px !important; }
+ .svc-item:hover .svc-thumb { height: 260px !important; }
+ 
+ .footer-main { flex-direction: column !important; gap: 3rem !important; }
+ .footer-navs { justify-content: flex-start !important; gap: 2rem !important; }
+}
