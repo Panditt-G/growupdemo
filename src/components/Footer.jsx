@@ -9,7 +9,7 @@ export default function Footer() {
             <img src="/logo/g-logo.png" alt="Grow Up Logo" style={{ height: '90px', objectFit: 'contain' }} />
             <span>GROW UP</span>
           </a>
-          <p className="gu-footer-copy">hello@growup.studio</p>
+          <p className="gu-footer-copy">Management.growupmedia@gmail.com</p>
           <p className="gu-footer-copy" style={{marginTop: '2rem'}}>© 2026 Grow Up. All content we make? Yours.</p>
         </div>
         <div className="gu-footer-right" style={{display: 'flex', flexDirection: 'column', gap: '2rem', alignItems: 'flex-end'}}>
