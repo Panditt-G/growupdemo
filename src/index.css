@@ -3371,7 +3371,7 @@ body {
   
   .svc-item { 
     grid-template-columns: 1fr !important;
-    grid-template-areas: " num\ \title\ \thumb\ \info\ !important;
+    grid-template-areas: "num" "title" "thumb" "info" !important;
  gap: 1.2rem !important;
  padding: 2rem 0 !important;
  }
