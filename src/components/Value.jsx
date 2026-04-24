@@ -1,14 +1,21 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { getCtaLink } from '../utils/ctaLink';
 
 export default function Value() {
+  const [ctaLink, setCtaLink] = useState('tel:+917821092963');
+
+  useEffect(() => {
+    setCtaLink(getCtaLink());
+  }, []);
+
   return (
     <section className="value-section" id="plans">
       <div className="value-inner">
         <p className="section-eyebrow reveal">The GrowwUp Difference</p>
         <h2 className="value-title reveal">Why limit content when you can<br />scale at volume with GrowwUp.</h2>
         <div className="value-actions reveal">
-          <a href="tel:+917821092963" className="btn-primary-blue" id="plans-cta">SEE OUR PLANS</a>
+          <a href={ctaLink} className="btn-primary-blue" id="plans-cta">SEE OUR PLANS</a>
           <Link to="/#services" className="btn-outline-white" id="plans-learn">Learn more</Link>
         </div>
         <div className="value-features">

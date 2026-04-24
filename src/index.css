@@ -3231,3 +3231,69 @@ body {
   margin-top: 0.5rem;
   cursor: default;
 }
+
+/* Final Layout Fixes */
+.gu-btn-hero, .gu-btn-nav, .btn-primary-blue, .cs-cta-btn {
+  display: inline-flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  justify-content: center !important;
+  white-space: nowrap !important;
+  gap: 0.4rem !important;
+  line-height: 1 !important;
+}
+.btn-arrow, .btn-icon, .cs-cta-icon, .cs-cta-btn svg {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  vertical-align: middle !important;
+  transform: translateY(0.5px) !important;
+}
+.footer-brand-img {
+  height: 40px !important;
+  width: auto !important;
+}
+.footer-logo {
+  font-size: 1.8rem !important;
+  font-weight: 800 !important;
+  color: #fff !important;
+  text-decoration: none !important;
+  display: block !important;
+  line-height: 1 !important;
+}
+.footer-logo span {
+  color: #b2e355 !important;
+}
+.footer-left {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 1.2rem !important;
+  flex: 0 0 350px !important;
+}
+.footer-brand-top {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 0 !important;
+  align-items: flex-start !important;
+}
+.social-icon {
+  color: #ffffff !important;
+  transition: opacity 0.2s ease;
+}
+.gu-hero-title, .gu-hero-sub, .gu-hero-kicker-badge {
+  user-select: none !important;
+  -webkit-user-select: none !important;
+  outline: none !important;
+}
+
+/* Service Section Polishes */
+.svc-item:hover .svc-thumb {
+  height: 320px !important;
+}
+
+/* Service Spacing */
+@media (min-width: 769px) {
+  .svc-item {
+    column-gap: 4rem !important;
+  }
+}

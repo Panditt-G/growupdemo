@@ -1,13 +1,16 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import { getCtaLink } from '../utils/ctaLink';
 
 export default function Nav() {
   const { pathname } = useLocation();
   const [scrolled, setScrolled] = useState(false);
   const [visible, setVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
+  const [ctaLink, setCtaLink] = useState('tel:+917821092963');
 
   useEffect(() => {
+    setCtaLink(getCtaLink());
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
       
@@ -48,7 +51,7 @@ export default function Nav() {
           <li><Link to="/case-study" className={pathname === '/case-study' ? 'active' : ''}>CASE STUDY</Link></li>
           <li><Link to="/why-content" className={pathname === '/why-content' ? 'active' : ''}>WHY CONTENT</Link></li>
         </ul>
-        <a href="tel:+917821092963" className="gu-btn-nav">
+        <a href={ctaLink} className="gu-btn-nav">
           BOOK A CALL
           <span className="btn-arrow">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">

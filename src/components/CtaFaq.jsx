@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import { getCtaLink } from '../utils/ctaLink';
 
 const CLIENT_COUNTRIES = ['India', 'USA', 'UK', 'Australia', 'UAE', 'Canada'];
 
@@ -13,6 +14,12 @@ const MARKERS = [
 ];
 
 export default function CtaFaq() {
+  const [ctaLink, setCtaLink] = useState('tel:+917821092963');
+
+  useEffect(() => {
+    setCtaLink(getCtaLink());
+  }, []);
+
   return (
     <section className="cta-faq-section" id="contact">
       <div className="cta-faq-inner">
@@ -25,7 +32,7 @@ export default function CtaFaq() {
             One call. Thirty minutes. We'll show you exactly what's missing and how we fix it.
           </p>
           <div className="cf-cta-group">
-            <a href="tel:+917821092963" className="gu-btn-hero">
+            <a href={ctaLink} className="gu-btn-hero">
               BOOK YOUR FREE CALL
             </a>
             <p className="cf-guarantee">No commitment. Just clarity.</p>

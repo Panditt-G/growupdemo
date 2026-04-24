@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
+import { getCtaLink } from '../utils/ctaLink';
 
 const STUDIES = [
   {
@@ -34,6 +35,11 @@ const STUDIES = [
 
 export default function CaseStudyPage() {
   const { id } = useParams();
+  const [ctaLink, setCtaLink] = useState('tel:+917821092963');
+
+  useEffect(() => {
+    setCtaLink(getCtaLink());
+  }, []);
   
   return (
     <main className="premium-cs-page">
@@ -114,7 +120,7 @@ export default function CaseStudyPage() {
               <span>Ready to scale?</span>
             </div>
             <h2 className="cs-cta-title">Let's write your success story.</h2>
-            <a href="tel:+917821092963" className="cs-cta-btn group">
+            <a href={ctaLink} className="cs-cta-btn group">
               START THE CONVERSATION
               <svg 
                 width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"

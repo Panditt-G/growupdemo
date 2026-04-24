@@ -1,10 +1,13 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
+import { getCtaLink } from '../utils/ctaLink';
 
 export default function Hero() {
   const bgRef = useRef(null);
+  const [ctaLink, setCtaLink] = useState('tel:+917821092963');
 
   useEffect(() => {
+    setCtaLink(getCtaLink());
     const handleMouseMove = (e) => {
       if (!bgRef.current) return;
       const { innerWidth, innerHeight } = window;
@@ -49,7 +52,7 @@ export default function Hero() {
 
         {/* CTA Section */}
         <div className="gu-hero-cta-group">
-          <a href="tel:+917821092963" className="gu-btn-hero">
+          <a href={ctaLink} className="gu-btn-hero">
             <span className="btn-text">GET STARTED TODAY</span>
             <span className="btn-arrow">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
