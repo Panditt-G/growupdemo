@@ -25,10 +25,17 @@ export default function Testimonials() {
   return (
     <section className="test-section">
       <div className="test-inner">
+        <div className="test-header">
+          <div>
+            <p className="test-header-label">What clients say</p>
+            <h2 className="test-header-title">Don't take<br />our word for it.</h2>
+          </div>
+          <p className="test-count">{testimonials.length} reviews</p>
+        </div>
         <div className="test-grid">
           {testimonials.map((t, i) => (
             <div className={`test-card t-${t.theme}`} key={i}>
-              <p className="test-quote">"{t.quote}"</p>
+              <p className="test-quote">{t.quote}</p>
               <div className="test-author">
                 <h4>{t.author}</h4>
                 <p>{t.role}</p>

@@ -30,9 +30,10 @@ export default function CtaFaq() {
     <section className="cta-faq-section" id="contact">
       <div className="cta-faq-inner">
         <div className="cf-left">
-          <h2 className="cf-title">YOUR MARKET<br/>IS MOVING.</h2>
+          <p className="cf-eyebrow">Ready when you are</p>
+          <h2 className="cf-title">YOUR MARKET<br />IS MOVING.</h2>
           <p className="cf-sub">
-            Every week without consistent content is ground you're giving away.<br/>
+            Every week without consistent content is ground you're giving away.
             One call. Thirty minutes. We'll show you exactly what's missing and how we fix it.
           </p>
           <div className="cf-cta-group">
@@ -41,11 +42,11 @@ export default function CtaFaq() {
           </div>
         </div>
         <div className="cf-right">
-          <h3 className="cf-faq-header">COMMON QUESTIONS</h3>
+          <h3 className="cf-faq-header">Common questions</h3>
           <div className="faq-list">
             {faqs.map((item, i) => (
-              <div 
-                className={`faq-item ${openIdx === i ? 'open' : ''}`} 
+              <div
+                className={`faq-item ${openIdx === i ? 'open' : ''}`}
                 key={i}
                 onClick={() => setOpenIdx(openIdx === i ? null : i)}
               >
