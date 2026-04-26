@@ -28,23 +28,20 @@ export default function SelectedWorks() {
   ];
 
   const logos = [
-    { src: '/logo/37.png',                           alt: '37'                   },
-    { src: '/logo/Aura Bling.png',                   alt: 'Aura Bling'           },
-    { src: '/logo/Banjos Logo.png',                  alt: 'Banjos'               },
-    { src: '/logo/Cela Logo.png',                    alt: 'Cela'                 },
-    { src: '/logo/Eunora Logo by nisha Garani .png', alt: 'Eunora'               },
-    { src: '/logo/finshell logo 01.jpg',             alt: 'Finshell'             },
-    { src: '/logo/kaari.png',                        alt: 'Kaari'                },
-    { src: '/logo/kaira.png',                        alt: 'Kaira'                },
-    { src: '/logo/liqquor embassy.png',              alt: 'Liquor Embassy'       },
-    { src: '/logo/Manifestation.png',                alt: 'Manifestation'        },
-    { src: "/logo/niya's logo.jpg",                  alt: "Niya's"               },
-    { src: '/logo/Sanmaan.png',                      alt: 'Sanmaan'              },
-    { src: '/logo/Shubhaarambh events Logo.png',     alt: 'Shubhaarambh Events'  },
-    { src: '/logo/tcs logo.jpeg',                    alt: 'TCS'                  },
-    { src: '/logo/timus-logo-black.avif',            alt: 'Timus'                },
-    { src: '/logo/Usha Infotech (1).png',            alt: 'Usha Infotech'        },
-    { src: '/logo/usha infra.png',                   alt: 'Usha Infra'           },
+    { src: '/logo/Banjos Logo.png',                          alt: 'Banjos'               },
+    { src: '/logo/finshell logo 01.png',                     alt: 'Finshell'             },
+    { src: '/logo/kaari.png',                                alt: 'Kaari'                },
+    { src: '/logo/kaira.png',                                alt: 'Kaira'                },
+    { src: '/logo/liqquor embassy.png',                      alt: 'Liquor Embassy'       },
+    { src: '/logo/Manifestation.png',                        alt: 'Manifestation'        },
+    { src: '/logo/Sanmaan.png',                              alt: 'Sanmaan'              },
+    { src: '/logo/Shubhaarambh events Logo without Bg.png',  alt: 'Shubhaarambh Events'  },
+    { src: '/logo/tcs_logo-.png',                            alt: 'TCS'                  },
+    { src: '/logo/timus_log.png',                            alt: 'Timus'                },
+    { src: '/logo/tiny_trends_logo.png',                     alt: 'Tiny Trends'          },
+    { src: '/logo/Usha Infotech (1).png',                    alt: 'Usha Infotech'        },
+    { src: '/logo/usha infra.png',                           alt: 'Usha Infra'           },
+    { src: '/logo/VAAMSI.png',                               alt: 'VAAMSI'               },
   ];
 
   return (

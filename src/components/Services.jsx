@@ -24,7 +24,7 @@ export default function Services() {
         "Editing, sound & delivery",
         "Short & long form",
       ],
-      video: null,
+      video: "/video/A Boring Morning but Cinematic -  Sony ZV-E10.mp4",
     },
     {
       num: "(03)",
@@ -36,7 +36,7 @@ export default function Services() {
         "Pitch decks",
         "Landing page design",
       ],
-      video: null,
+      video: "/video/Motion Design Reel.mp4",
     },
     {
       num: "(04)",
