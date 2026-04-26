@@ -235,10 +235,10 @@ By accessing our website at www.growupmedia.com, signing a service agreement, ma
     title: 'Contact & Legal Enquiries',
     content: 'For any questions, concerns, or legal matters related to these Terms, please contact us:',
     contactCard: {
-      name: 'Grow Up Media — Legal & Compliance',
+      name: 'Grow Up Media',
       address: 'Nashik, Maharashtra, India',
-      email: 'legal@growupmedia.com',
-      website: 'www.growupmedia.com',
+      email: 'management.growupmedia@gmail.com',
+      contact: '+91 7821092963',
     },
   },
 ];
@@ -306,7 +306,7 @@ export default function TermsPage() {
                     <p className="legal-contact-name">{s.contactCard.name}</p>
                     <p>Address: {s.contactCard.address}</p>
                     <p>Email: <a href={`mailto:${s.contactCard.email}`}>{s.contactCard.email}</a></p>
-                    <p>Website: {s.contactCard.website}</p>
+                    <p>Phone: {s.contactCard.contact}</p>
                   </div>
                 )}
               </section>

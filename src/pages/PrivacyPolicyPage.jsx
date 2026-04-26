@@ -174,9 +174,9 @@ By accessing or using our website and services, you agree to the terms outlined 
     title: 'Contact Us',
     content: 'If you have any questions, concerns, or requests regarding this Privacy Policy or our data practices, please contact:',
     contact: {
-      name: 'Grow Up Media — Privacy Team',
-      email: 'privacy@growupmedia.com',
-      website: 'www.growupmedia.com',
+      name: 'Grow Up Media',
+      email: 'management.growupmedia@gmail.com',
+      contact: '+91 7821092963',
     },
   },
 ];
@@ -189,7 +189,7 @@ export default function PrivacyPolicyPage() {
         <div className="legal-hero">
           <span className="legal-eyebrow">Legal</span>
           <h1 className="legal-title">Privacy <span className="legal-title-accent">Policy</span></h1>
-          <p className="legal-meta">Effective Date: January 1, 2025 &nbsp;|&nbsp; Last Updated: April 2025</p>
+          <p className="legal-meta">Effective Date: January 1, 2026 &nbsp;|&nbsp; Last Updated: April 2026</p>
         </div>
 
         <div className="legal-body">
@@ -237,7 +237,7 @@ export default function PrivacyPolicyPage() {
                   <div className="legal-contact-card">
                     <p className="legal-contact-name">{s.contact.name}</p>
                     <p>Email: <a href={`mailto:${s.contact.email}`}>{s.contact.email}</a></p>
-                    <p>Website: {s.contact.website}</p>
+                    <p>Phone: {s.contact.contact}</p>
                   </div>
                 )}
               </section>

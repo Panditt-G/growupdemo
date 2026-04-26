@@ -2233,7 +2233,34 @@ body {
 .t-dark .test-author {
   border-color: rgba(255,255,255,0.12);
 }
-.t-dark .test-card::before { color: #fff; }
+.t-light.test-card::before { color: #B2E355; opacity: 0.4; }
+.t-dark.test-card::before  { color: #B2E355; opacity: 0.55; }
+
+/* Testimonial dots + progress */
+.test-dots {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+}
+.test-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(0,0,0,0.15);
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  transition: background 0.3s ease, transform 0.3s ease, width 0.3s ease;
+  flex-shrink: 0;
+}
+.test-dot.active {
+  background: #0a0a0a;
+  transform: scale(1.25);
+  width: 24px;
+  border-radius: 4px;
+}
+.test-dot:hover:not(.active) { background: rgba(0,0,0,0.35); }
+
 
 /* ─────────────────────────────────────────────
    GROW UP - CTA & FAQ
